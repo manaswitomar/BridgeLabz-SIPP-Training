@@ -1,5 +1,5 @@
 import java.util.*;
-public class Voting
+public class PositiveNegative
 {
     public static void main(String[] args)
     {

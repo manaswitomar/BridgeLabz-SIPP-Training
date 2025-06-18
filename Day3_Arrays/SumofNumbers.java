@@ -1,7 +1,6 @@
 import java.util.Scanner;
 public class SumofNumbers{
     public static void main(String[] args){
-        import java.util.Scanner;
         double[] numbers = new double[10];
         double total = 0.0;                
         int index = 0;                     
