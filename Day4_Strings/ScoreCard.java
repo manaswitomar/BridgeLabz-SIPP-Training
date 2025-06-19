@@ -45,7 +45,7 @@ public class StudentScoreCard {
                     scores[i][0], scores[i][1], scores[i][2],
                     stats[i][0], stats[i][1], stats[i][2],
                     grades[i]);}}
-    public static void main(String[] args) {
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of students: ");
         int n = sc.nextInt();
