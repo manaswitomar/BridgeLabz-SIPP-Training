@@ -32,10 +32,9 @@ public class VowelConsonantChecker {
         return result;
     }
     public static void displayTable(String[][] data) {
-        System.out.printf("%-10s | %-15s\n", "Character", "Type");
-        System.out.println("----------------------------");
+        System.out.printf( "Character", "Type");
         for (String[] row : data) {
-            System.out.printf("%-10s | %-15s\n", row[0], row[1]);
+            System.out.printf(row[0], row[1]);
         }
     }
     public static void main(String[] args) {

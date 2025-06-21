@@ -26,9 +26,9 @@ public class Voting {
         return result;
     }
     public static void displayVotingStatus(String[][] eligibilityData) {
-        System.out.printf("%-10s %-10s\n", "Age", "Can Vote?");
+        System.out.println("Age", "Can Vote?");
         for (int i = 0; i < eligibilityData.length; i++) {
-            System.out.printf("%-10s %-10s\n", eligibilityData[i][0], eligibilityData[i][1]);
+            System.out.println(eligibilityData[i][0], eligibilityData[i][1]);
         }
     }
     public static void main(String[] args) {
