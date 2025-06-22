@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EmployeeBonus {
+public class Employee_Bonus {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

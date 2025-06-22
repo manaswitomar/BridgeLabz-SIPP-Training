@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class LargestDigitsFinder {
+public class SecondLargest{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
@@ -38,5 +38,6 @@ public class LargestDigitsFinder {
         } else {
             System.out.println("all digits are the same");
         }
+        sc.close();
     }
 }

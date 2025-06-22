@@ -1,4 +1,4 @@
-class Main
+class Kilometer_Miles
 {
     void main(String[] args){
         double n=10.8;

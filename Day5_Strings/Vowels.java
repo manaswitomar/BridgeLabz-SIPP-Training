@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class VowelConsonantChecker {
+public class Vowels {
 
     
     public static String getCharType(char ch) {
@@ -43,5 +43,6 @@ public class VowelConsonantChecker {
         String input = scanner.nextLine();
         String[][] result = processString(input);
         displayTable(result);
+        scanner.close();
     }
 }

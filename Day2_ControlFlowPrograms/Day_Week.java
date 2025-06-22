@@ -1,4 +1,4 @@
-public class DayOfWeek {
+public class Day_Week {
     public static void main(String[] args) {
         if (args.length != 3) {
             System.out.println(" DayOfWeek <month> <day> <year>");

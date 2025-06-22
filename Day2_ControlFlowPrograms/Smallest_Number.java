@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SmallestNumber {
+public class Smallest_Number {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n1 = sc.nextInt(); 
@@ -15,5 +15,6 @@ public class SmallestNumber {
         }else{
             System.out.println("Is the third number the smallest?yes");
         }
+        sc.close();
     }
 }

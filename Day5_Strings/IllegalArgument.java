@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class IllegalArgumentDemo {
+public class IllegalArgument {
     public static void generateException(String str) {
         String result = str.substring(5, 2); 
         System.out.println("Substring: " + result); 
@@ -26,5 +26,6 @@ public class IllegalArgumentDemo {
             System.out.println("Program crashed due to unhandled exception: " + e.getMessage());}
         System.out.println("\n--- Handling Exception with Try-Catch ---");
         handleException(input);
+        sc.close();
     }
 }

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PrimeNumber {
+public class Prime_Number {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a number greater than 13: ");

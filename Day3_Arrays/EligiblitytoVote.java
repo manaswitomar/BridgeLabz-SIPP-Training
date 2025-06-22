@@ -1,5 +1,5 @@
 import java.util.*;
-public class Voting
+public class EligiblitytoVote
 {
     public static void main(String[] args)
     {
@@ -13,7 +13,7 @@ public class Voting
                 System.out.println("Invalid age");
             }
             else if(age[i]>=18){
-                Syatem.out.println(" The student with the age"+age[i]+" can vote");
+                System.out.println(" The student with the age"+age[i]+" can vote");
                 
             }
             else{

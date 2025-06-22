@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class VowelConsonantCounter {
+public class VowelConsonant {
     public static String checkCharacterType(char ch) {
         if (ch >= 'A' && ch <= 'Z') {
             ch = (char)(ch + 32); 

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TrimString{
+public class Trim{
     public static int[] getTrimIndexes(String str) {
         int start = 0, end = str.length() - 1;
         while (start < str.length() && str.charAt(start) == ' ') {

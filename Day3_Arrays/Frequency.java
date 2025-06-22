@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class DigitFrequency {
+public class Frequency {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         long num = sc.nextLong(); 
@@ -24,5 +24,6 @@ public class DigitFrequency {
                 System.out.println("Digit " + i + " => " + freq[i] + " time(s)");
             }
         }
+        sc.close();
     }
 }

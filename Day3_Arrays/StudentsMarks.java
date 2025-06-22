@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class StudentMarksCalculator {
+public class StudentsMarks {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of students: ");
@@ -15,7 +15,7 @@ public class StudentMarksCalculator {
                 String subject = (j == 0) ? "Physics" : (j == 1) ? "Chemistry" : "Maths";
                 while (true) {
                     System.out.print("Enter marks for " + subject + ": ");
-                    int mark = scanner.nextInt();
+                    int mark = sc.nextInt();
                     if (mark >= 0 && mark <= 100) {
                         marks[i][j] = mark;
                         break;
@@ -43,7 +43,7 @@ public class StudentMarksCalculator {
         System.out.printf( "Physics", "Chemistry", "Maths", "Percentage", "Grade", "Status");
         for (int i = 0; i < n; i++) {
             String status = grades[i].equals("F") ? "Fail" : "Pass";
-            System.out.println(marks[i][0], marks[i][1], marks[i][2], percentages[i], grades[i], status);
+            System.out.printf(status, args)(marks[i][0], marks[i][1], marks[i][2],p[i], grades[i], status);
         }
     }
 }

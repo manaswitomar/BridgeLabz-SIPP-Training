@@ -1,5 +1,5 @@
 import java.util.*;
-public class WordLengthTable {
+public class WordLength{
     public static String[] splitWords(String text) {
         StringBuilder word = new StringBuilder();
         java.util.List<String> wordsList = new java.util.ArrayList<>();
@@ -47,5 +47,6 @@ public class WordLengthTable {
             int length = Integer.parseInt(row[1]);
             System.out.println(word + "\t\t" + length);
         }
+        scanner.close();
     }
 }

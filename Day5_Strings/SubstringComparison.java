@@ -9,9 +9,10 @@ public class SubstringComparison {
         int start = sc.nextInt();
         System.out.print("Enter end index (exclusive): ");
         int end = sc.nextInt();
-        if (start < 0 || end > input.length() || start >= end) {
+        if (start < 0 || end > input.length() || start >= end)
+        {
             System.out.println("Invalid index range.");
-            return;}
+        }
         String manualSubstring = createSubstringUsingCharAt(input, start, end);
         String builtInSubstring = input.substring(start, end);
         boolean areEqual = compareStringsUsingCharAt(manualSubstring, builtInSubstring);

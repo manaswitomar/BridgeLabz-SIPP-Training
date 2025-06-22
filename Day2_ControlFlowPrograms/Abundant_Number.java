@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class AbundantNumber {
+public class Abundant_Number {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

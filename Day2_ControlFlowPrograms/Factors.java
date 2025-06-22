@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FactorsFinder {
+public class Factors {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

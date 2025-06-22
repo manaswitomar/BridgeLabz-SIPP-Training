@@ -1,8 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class LargestDigit {
+public class Largest{
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         long num = sc.nextLong();
         int maxDigit = 10;
         int[] digits = new int[maxDigit];
@@ -41,5 +41,6 @@ public class LargestDigit {
         } else {
             System.out.println("all digits are the same");
         }
+        sc.close();
     }
 }

@@ -1,4 +1,4 @@
-class Main{
+class Pen_Division{
     public static void main(String[] args){
         int pen=14;
         int students=3;

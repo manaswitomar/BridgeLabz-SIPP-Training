@@ -31,5 +31,6 @@ public class LowercaseComparison {
         System.out.println("\nManual Lowercase:   " + manualLower);
         System.out.println("Built-in Lowercase: " + builtInLower);
         System.out.println("Are both equal?     " + isEqual);
+        sc.close();
     }
 }

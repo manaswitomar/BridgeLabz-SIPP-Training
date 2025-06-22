@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GradeCalculator {
+public class GradesRemarks {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter marks for Physics: ");
@@ -32,7 +32,7 @@ public class GradeCalculator {
         }
         else{
             grade="R";
-            remarks="Remedial standards"
+            remarks="Remedial standards";
         }
 
         

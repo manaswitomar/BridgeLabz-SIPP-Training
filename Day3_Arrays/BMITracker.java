@@ -1,10 +1,10 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class BMITracker {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter number of persons: ");
-        int number = sc.nextInt();
+        int num = sc.nextInt();
 
         double[][] personData = new double[num][3]; 
         String[] status = new String[num];
@@ -44,9 +44,10 @@ public class BMITracker {
             }
         }
         System.out.println(" BMI Report");
-        System.out.println( "Height", "Weight", "BMI", "Status");
+        System.out.printf( "Height", "Weight", "BMI", "Status");
         for (int i = 0; i < num; i++) {
-            System.out.println(personData[i][0], personData[i][1], personData[i][2], weight[i]);
+            System.out.printf(null,)(personData[i][0], personData[i][1], personData[i][2], status[i]);
         }
+        sc.close();
     }
 }

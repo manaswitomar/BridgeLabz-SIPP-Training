@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CountDown {
+public class CountDownwhile {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
@@ -10,6 +10,7 @@ public class CountDown {
              i--;
 
         }
+        sc.close();
             
     }
 }

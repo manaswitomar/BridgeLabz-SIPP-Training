@@ -1,5 +1,5 @@
-class Main(){
-    void main(){
+class PenDistribution{
+    public static void main(String[] args){
         int NumberofPens=14;
         int students=3;
         int distributed=NumberofPens/students;

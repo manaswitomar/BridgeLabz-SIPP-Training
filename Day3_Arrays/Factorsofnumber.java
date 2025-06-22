@@ -1,6 +1,5 @@
-import java.util.*;
-
-public class FactorFinder {
+import java.util.Scanner;
+public class Factorsofnumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter a number to find its factors: ");
@@ -26,5 +25,6 @@ public class FactorFinder {
         for (int i = 0; i < index; i++) {
             System.out.print(factors[i] + " ");
         }
+        sc.close();
     }
 }

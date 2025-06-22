@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NaturalNumbers {
+public class NaturalNumber{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -24,6 +24,6 @@ public class NaturalNumbers {
             }
         }
 
-        scanner.close();
+        sc.close();
     }
 }

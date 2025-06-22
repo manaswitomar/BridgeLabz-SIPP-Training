@@ -11,7 +11,7 @@ public class Height{
         double mean=sum/heights.length;
         System.out.println("mean:" +mean);
         
-        Scanner.close();
+        sc.close();
 
     }
 }

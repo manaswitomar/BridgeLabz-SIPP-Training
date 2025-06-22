@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Vote{
+public class EligibletoVote{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int age = sc.nextInt();
@@ -9,5 +9,6 @@ public class Vote{
         }else{
             System.out.print("The person's age is"+age+"and cannot vote");
         }
+        sc.close();
     }
 }

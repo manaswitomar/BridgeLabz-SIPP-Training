@@ -1,6 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
 
-public class StringLengthDemo {
+public class Length {
     public static int WithoutUsingLength(String str) {
         int count = 0;
         try {

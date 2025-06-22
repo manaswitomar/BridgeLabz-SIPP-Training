@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class DivisorsBelow100 {
+public class Multiple_Below{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter a positive integer less than 100: ");

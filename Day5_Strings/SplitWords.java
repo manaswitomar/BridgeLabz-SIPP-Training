@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class SplitWordsComparison {
+public class SplitWords {
     public static int getLength(String text) {
         int count = 0;
         try {
@@ -66,5 +66,7 @@ public class SplitWordsComparison {
         displayArray(builtInSplit, "Built-in split():");
         boolean areEqual = compareArrays(customSplit, builtInSplit);
         System.out.println("\nAre both arrays equal? " + areEqual);
+        scanner.close();
     }
+
 }

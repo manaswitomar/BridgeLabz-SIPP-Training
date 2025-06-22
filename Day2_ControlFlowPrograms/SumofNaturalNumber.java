@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SumOfNaturalNumbers {
+public class SumofNaturalNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -12,5 +12,6 @@ public class SumOfNaturalNumbers {
             sum= n * (n+1) / 2;
             System.out.print(" The sum of"+n+"natural numbers is"+sum); 
         }
+        sc.close();
     }
 }

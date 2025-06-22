@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class GreatestFactors {
+public class GreatestFactorfor {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

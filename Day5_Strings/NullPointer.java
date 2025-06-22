@@ -1,7 +1,7 @@
-import java.util.*;
+
 public class NullPointer {
-    public static void generateNullPointerException() {
-        String text = null;
+    public static String generateNullPointerException() {
+        String text = NullPointer.generateNullPointerException();
         int length = text.length(); 
         System.out.println("Length: " + length); 
     }

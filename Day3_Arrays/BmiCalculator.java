@@ -1,11 +1,12 @@
 import java.util.*;
+import java.io.PrintStream;
 
-public class BMICalculator {
-        public static void main(String[] args) {
+public class BmiCalculator {
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        double[] heights = new double[n];       
-        double[] weights = new double[n];       
+        double[] heights = new double[n];
+        double[] weights = new double[n];
         double[] bmis = new double[n];
         String[] status = new String[n];
         for (int i = 0; i < n; i++) {
@@ -23,7 +24,8 @@ public class BMICalculator {
                 if (weights[i] <= 0) {
                     System.out.println("Weight must be positive");
                 }
-            } while (weights[i] <= 0);}
+            } while (weights[i] <= 0);
+        }
         for (int i = 0; i < n; i++) {
             bmis[i] = weights[i] / (heights[i] * heights[i]);
 
@@ -35,11 +37,12 @@ public class BMICalculator {
                 status[i] = "Overweight";
             } else {
                 status[i] = "Obese";
-            }}
+            }
+        }
         System.out.println("\n BMI Report");
         System.out.printf("Height", "Weight", "BMI", "Status");
         for (int i = 0; i < n; i++) {
-            System.out.println(heights[i], weights[i], bmis[i], status[i]);
+            System.out.printf(heights[i], weights[i], bmis[i], status[i]);
         }
     }
 }

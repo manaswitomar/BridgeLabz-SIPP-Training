@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class FriendsInfo {
+public class Youngest_Tallest {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Amar's age: ");
