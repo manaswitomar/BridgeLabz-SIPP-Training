@@ -45,4 +45,9 @@ public class BankAccount {
 
         account.displayBalance();
     }
+
+    public static void getTotalAccounts() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getTotalAccounts'");
+    }
 }
