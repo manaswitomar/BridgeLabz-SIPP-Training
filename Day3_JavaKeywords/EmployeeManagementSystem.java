@@ -5,7 +5,7 @@ public class EmployeeManagementSystem {
     String designation;
 
     EmployeeManagementSystem(String companyName, String name, int id,String designation){
-        this.companyName=companyName;
+        EmployeeManagementSystem.companyName=companyName;
         this.name=name;
         this.id=id;
         this.designation=designation;
