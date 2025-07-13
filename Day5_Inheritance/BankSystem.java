@@ -11,6 +11,10 @@ class BankAccount {
         System.out.println("Account Number: " + accountNumber);
         System.out.println("Balance       : ₹" + balance);
     }
+
+    public static void getTotalAccounts() {
+        throw new UnsupportedOperationException("Unimplemented method 'getTotalAccounts'");
+    }
 }
 class SavingsAccount extends BankAccount {
     private double interestRate;
