@@ -38,6 +38,6 @@ public class BankAccountSystem {
         acc2.displayDetails();
         System.out.println();
 
-        BankAccount.getTotalAccounts(); 
+        BankAccountSystem.getTotalAccounts(); 
     }
 }
