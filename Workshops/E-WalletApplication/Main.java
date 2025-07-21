@@ -1,78 +1,160 @@
-import java.util.ArrayList;
-import java.util.List;
-import java.time.LocalDateTime;
+
+import java.util.*;
+
 class User {
-   int userId;
-   String password;
+    int userId;
+    String password;
+    Wallet wallet;
 
-   public User(int var1, String var2) {
-      this.userId = var1;
-      this.password = var2;
-   }
+    public User(int userId, String password, Wallet wallet) {
+        this.userId = userId;
+        this.password = password;
+        this.wallet = wallet;
+    }
 
-   public String getPassword() {
-      return this.password;
-   }
+    public String getPassword() {
+        return password;
+    }
 
-   public int getuserId() {
-      return this.userId;
-   }
+    public int getuserId() {
+        return userId;
+    }
+
+    public Wallet getWallet() {
+        return wallet;
+    }
 }
-class Wallet {
-   private double balance;
-   private List<Transaction> transaction;
-   private User user;
 
-   public Wallet(User var1) {
-      this.user = var1;
-      this.balance = 0.0;
-      this.transaction = new ArrayList<Transaction>();
-   }
+abstract class Wallet implements transferable {
+    private double balance;
+    private List<Transaction> history = new ArrayList<>();
 
-   double loadMoney(double var1) {
-      if (var1 > 0.0) {
-         this.balance += var1;
-      }
+    public Wallet(double initialBalance) {
+        this.balance = initialBalance;
+    }
 
-      return this.balance;
-   }
+    public double getBalance() {
+        return balance;
+    }
+
+    public void loadMoney(double amount) {
+        balance += amount;
+        history.add(new Transaction("Loaded", amount));
+    }
+
+    public void viewHistory() {
+        for (Transaction t : history) {
+            System.out.println(t);
+        }
+    }
+
+    protected void addTransaction(String type, double amount) {
+        history.add(new Transaction(type, amount));
+    }
+
+    protected void deductBalance(double amount) {
+        this.balance -= amount;
+    }
+
+    protected void addBalance(double amount) {
+        this.balance += amount;
+    }
+
+    public abstract void transferTo(Wallet receiver, double amount);
+
 }
+
 class PersonalWallet extends Wallet {
-   static final double LIMIT = 1250.0;
+    private final double DAILY_LIMIT = 5000;
 
-   public PersonalWallet(User var1) {
-      super(var1);
-   }
+    public PersonalWallet(double balance) {
+        super(balance);
+    }
+
+    @Override
+    public void transferTo(Wallet receiver, double amount) {
+        if (amount <= DAILY_LIMIT && amount <= getBalance()) {
+            deductBalance(amount);
+            receiver.addBalance(amount);
+            addTransaction("Transferred to another wallet", amount);
+            System.out.println("Transfer successful from Personal Wallet.");
+        } else {
+            System.out.println("Transfer failed: Amount exceeds limit or insufficient funds.");
+        }
+    }
 }
+
 class BusinessWallet extends Wallet {
-   public BusinessWallet(User var1) {
-      super(var1);
-   }
+    private final double DAILY_LIMIT = 20000;
+
+    public BusinessWallet(double balance) {
+        super(balance);
+    }
+
+    @Override
+    public void transferTo(Wallet receiver, double amount) {
+        if (amount <= DAILY_LIMIT && amount <= getBalance()) {
+            deductBalance(amount);
+            receiver.addBalance(amount);
+            addTransaction("Business Transfer", amount);
+            System.out.println("Transfer successful from Business Wallet.");
+        } else {
+            System.out.println("Transfer failed: Amount exceeds business limit or insufficient funds.");
+        }
+    }
+
 }
+
 interface transferable {
-   String transferTo();
-}
-abstract class Transaction {
-   private String type;
-   private double amount;
-   private LocalDateTime timestamp;
-
-   public Transaction(String var1, double var2) {
-      this.type = var1;
-      this.amount = var2;
-      this.timestamp = LocalDateTime.now();
-   }
-
-   public void transferTo(User var1, double var2) {
-   }
-
-   public void display(User var1) {
-      String var10001 = this.type;
-      System.out.println(var10001 + " of ₹" + this.amount + " on " + String.valueOf(this.timestamp));
-      double var2 = this.amount;
-      System.out.println("" + var2 + "transfer to" + String.valueOf(var1));
-   }
+    void transferTo(Wallet receiver, double amount);
 }
 
+class Transaction {
+    String type;
+    double amount;
+    Date timestamp;
 
+    public Transaction(String type, double amount) {
+        this.type = type;
+        this.amount = amount;
+        this.timestamp = new Date();
+    }
 
+    @Override
+    public String toString() {
+        return timestamp + " - " + type + ": ₹" + amount;
+    }
+
+    public void transferTo(User user, double amount) {
+
+    }
+
+    public void display(User user) {
+        System.out.println(type + " of ₹" + amount + " on " + timestamp);
+        System.out.println(amount + "transfer to" + user);
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        User user1 = new User(121, "A1B2c3", new PersonalWallet(1200.00));
+        System.out.println("user registered successfully");
+        User user2 = new User(131, "MtKh546", new BusinessWallet(15000.00));
+        System.out.println("user registered successfully");
+
+        user1.getPassword();
+        user1.getuserId();
+        user1.getWallet().loadMoney(500.00);
+        System.out.println("Money loaded successfully. Current balance: ₹" + user1.getWallet().getBalance());
+        user1.getWallet().transferTo(user2.getWallet(), 300.00);
+        System.out.println("Transfer successful. Current balance: ₹" + user1.getWallet().getBalance());
+        user1.getWallet().viewHistory();
+        user2.getWallet().viewHistory();
+        user2.getWallet().transferTo(user1.getWallet(), 200.00);
+        System.out.println("Transfer successful. Current balance: ₹" + user2.getWallet().getBalance());
+        user2.getWallet().viewHistory();
+
+    }
+
+}
